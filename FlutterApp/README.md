@@ -1,16 +1,35 @@
-# cropyieldredictor
+# Crop Yield Predictor - Flutter Mobile App
 
-Crop Yield Prediction
+## 📱 Mobile Application for Agricultural Predictions
 
-## Getting Started
+**Platform**: Android, iOS, Web  
+**API Integration**: Live ML backend at https://crop-yield-api-pfsb.onrender.com
 
-This project is a starting point for a Flutter application.
+## 🎯 Core Features
 
-A few resources to get you started if this is your first Flutter project:
+### Input Management
+- **8 Parameter Fields**: N, P, K, Temperature, Humidity, pH, Rainfall, Crop Type
+- **Real-time Validation**: Range checking & numeric input validation
+- **Pre-filled Samples**: Realistic agricultural values for quick testing
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Prediction Engine
+- **Live API Calls**: Connects to deployed Random Forest model
+- **Loading States**: Visual feedback during prediction
+- **Result Display**: Clear yield predictions in kg/ha
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### User Experience  
+- **Material Design**: Professional, intuitive interface
+- **Error Handling**: Comprehensive validation messages
+- **Cross-platform**: Single codebase for all devices
+
+## 🛠️ Technical Implementation
+
+### Architecture
+```dart
+lib/main.dart
+├── CropYieldPredictorApp()      // MaterialApp root
+├── PredictionPage()             // Main screen
+│   ├── _PredictionPageState()   // Business logic
+│   │   ├── predictYield()       // API communication
+│   │   ├── _validateInputs()    // Client-side validation
+│   │   └── _buildInputField()   // UI components
