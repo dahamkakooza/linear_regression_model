@@ -56,9 +56,9 @@ text
 ##  Model Performance Comparison
 | Model | R² Score | MAE (kg/ha) | Status |
 |-------|----------|-------------|--------|
-| Random Forest | 0.9692 | 291.81 |  **Production** |
-| Decision Tree | 0.9528 | 370.57 |  |
-| Linear Regression | 0.5653 | 2700.73 |  |
+| Random Forest | 0.9927 | 64.75 |  **Production** |
+| Decision Tree | 0.9766 | 116.72 |  |
+| Linear Regression | 0.9605 | 136.33 |  |
 
 ##  Technology Stack
 - **Backend**: Python, FastAPI, Scikit-learn, Pandas, NumPy
